@@ -1,0 +1,11 @@
+.container {
+  display: block;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.thanks {
+  margin-top: 50px;
+  text-align: right;
+}

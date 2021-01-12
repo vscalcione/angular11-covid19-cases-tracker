@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>
+    Covid-19 in {{selectedCountry ? selectedCountry.Country : 'Choose country' }}
+  </h1>
+
+  <div>
+    <label>Select country: </label>
+    <select [ngModel]="selectedCountry" (ngModelChange)="selectCountry($event)" class="form-control">
+      <option *ngFor="let country of countries" [ngValue]="country">{{country.Country}}</option>
+    </select>
+  </div>
+
+
+  <h2>total</h2>
+  <app-chart [data]="total" theme="dark"></app-chart>
+
+  <h2>daily</h2>
+  <app-chart [data]="daily" theme="dark"></app-chart>
+
+  <div *ngIf="selectedCountry.Slug === 'italy'">
+    <h2>
+      region total
+    </h2>
+    <app-chart [data]="regionTotal" theme="dark"></app-chart>
+
+    <h2>
+      region daily
+    </h2>
+    <app-chart [data]="regionDaily" theme="dark"></app-chart>
+  </div>
+
+
+  <p class="thanks">
+    thanks to <a target="_blank" href="https://covid19api.com/">Covid19 API</a> for the data.
+  </p>
+</div>

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;800&display=swap");
+
+$bg-color: rgba(30, 30, 30);
+$color: white;
+$link-color: white;
+
+//$bg-color: rgba(255,255,255);
+//$color: black;
+
+html {
+  font-family: Exo;
+  background-color: $bg-color;
+  color: $color;
+  a {
+    color: $link-color;
+  }
+}
